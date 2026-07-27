@@ -4,7 +4,7 @@ A polished Flutter login page with a modern authentication screen, email and pas
 
 ## Project Preview
 
-![Project Preview](assets/images/login_icon.png)
+![Project Preview](assets/images/preview.png)
 
 ## Overview
 
