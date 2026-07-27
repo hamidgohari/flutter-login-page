@@ -84,6 +84,8 @@ class MyHomePage extends StatelessWidget {
                     hintText: "example@email.com",
                     contentPadding: EdgeInsets.fromLTRB(0, 0, 20, 0),
                     prefixIcon: Container(
+                      padding: EdgeInsets.all(0),
+                      margin: EdgeInsets.all(0),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(4),
                         color: Color.fromRGBO(197, 197, 197, 1),
@@ -101,6 +103,8 @@ class MyHomePage extends StatelessWidget {
                   decoration: InputDecoration(
                     hintText: "*****************",
                     prefixIcon: Container(
+                      padding: EdgeInsets.all(0),
+                      margin: EdgeInsets.all(0),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(4),
                         color: Color.fromRGBO(197, 197, 197, 1),
@@ -113,21 +117,32 @@ class MyHomePage extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 32),
-                ElevatedButton(
-                  onPressed: () {},
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "Log in",
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                        ),
+                Container(
+                  decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withValues(alpha: .43),
+                        blurRadius: 9,
+                        offset: Offset(0, 4),
                       ),
-                      SizedBox(width: 3),
-                      Icon(CupertinoIcons.arrow_right_to_line, size: 24),
                     ],
+                  ),
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "Log in",
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(width: 3),
+                        Icon(CupertinoIcons.arrow_right_to_line, size: 24),
+                      ],
+                    ),
                   ),
                 ),
                 SizedBox(height: 32),
@@ -155,31 +170,42 @@ class MyHomePage extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: 32),
-                ElevatedButton(
-                  style: ButtonStyle(
-                    backgroundColor: WidgetStatePropertyAll(Colors.transparent),
-                    side: WidgetStatePropertyAll(
-                      BorderSide(
-                        color: Color.fromRGBO(4, 210, 255, 1),
-                        width: 2,
-                        strokeAlign: 2,
-                      ),
-                    ),
+                Container(
+                  decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withValues(alpha: .43),
+                        blurRadius: 9,
+                        offset: Offset(0, 4),
+                      )
+                    ]
                   ),
-                  onPressed: () {},
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "Sign Up",
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
+                  child: ElevatedButton(
+                    style: ButtonStyle(
+                      backgroundColor: WidgetStatePropertyAll(Colors.transparent),
+                      side: WidgetStatePropertyAll(
+                        BorderSide(
+                          color: Color.fromRGBO(4, 210, 255, 1),
+                          width: 2,
+                          strokeAlign: 2,
                         ),
                       ),
-                      SizedBox(width: 3),
-                      Icon(CupertinoIcons.arrow_right_to_line, size: 24),
-                    ],
+                    ),
+                    onPressed: () {},
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "Sign Up",
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(width: 3),
+                        Icon(CupertinoIcons.arrow_right_to_line, size: 24),
+                      ],
+                    ),
                   ),
                 ),
               ],
